@@ -36,9 +36,10 @@ function env(string $key, $default = null) {
 
 // ── Constants ────────────────────────────────────────────────
 define('DB_HOST',     env('DB_HOST',     'localhost'));
-define('DB_USER',     env('DB_USER',     'root'));
-define('DB_PASS',     env('DB_PASS',     ''));
+define('DB_USER',     env('DB_USERNAME', 'root'));
+define('DB_PASS',     env('DB_PASSWORD', ''));
 define('DB_NAME',     env('DB_NAME',     'hotel_db'));
+define('DB_PORT',     (int) env('DB_PORT', 3306));
 
 define('APP_NAME',    env('APP_NAME',    'Hotel Grand Palace'));
 define('APP_VERSION', env('APP_VERSION', '2.3.1'));
@@ -60,7 +61,7 @@ session_start();
 
 // ── Database ─────────────────────────────────────────────────
 function db_connect() {
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     if (!$conn) {
         die("Database connection failed: " . mysqli_connect_error() .
             " | Host: " . DB_HOST . " | User: " . DB_USER);
