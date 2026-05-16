@@ -1,0 +1,11 @@
+2026-05-16 20:11:32 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '21232f297a57a5a743894a0e4a801fc3' AND is_active = 1
+2026-05-16 20:12:16 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
+2026-05-16 20:12:23 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
+2026-05-16 20:12:37 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'manager' AND password = '0795151defba7a4b5dfa89170de46277' AND is_active = 1
+2026-05-16 20:14:42 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'manager' AND password = '0795151defba7a4b5dfa89170de46277' AND is_active = 1
+2026-05-16 20:23:41 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
+2026-05-16 21:00:35 | ::1 | admin | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
+2026-05-16 21:09:52 | ::1 | admin | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
+2026-05-16 21:11:10 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
+2026-05-16 21:13:52 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
+2026-05-16 21:14:08 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'staff' AND password = 'de9bf5643eabf80f4a56fda3bbb84483' AND is_active = 1
