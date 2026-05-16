@@ -22,15 +22,23 @@ A deliberately vulnerable PHP hotel management web application built for **secur
 mysql -u root hotel_db < setup.sql
 ```
 
-**2. Configure credentials**
+**2. Configure environment**
 
-Edit `config.php` and set your MySQL password:
+```bash
+cp .env.example .env
+```
 
-```php
-define('DB_PASS', 'your_password');
+Then edit `.env` and set your values (at minimum `DB_PASS`):
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=your_password
+DB_NAME=hotel_db
 ```
 
 **3. Seed demo data** *(optional — wipes and re-populates all tables)*
+
 
 ```powershell
 Get-Content seeder.sql | mysql -u root hotel_db

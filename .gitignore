@@ -1,1 +1,14 @@
 vulnerabilities.md
+
+# Environment — never commit real credentials
+.env
+
+# Runtime directories
+uploads/
+logs/
+
+# OS & editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp

@@ -9,3 +9,4 @@
 2026-05-16 21:11:10 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
 2026-05-16 21:13:52 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
 2026-05-16 21:14:08 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'staff' AND password = 'de9bf5643eabf80f4a56fda3bbb84483' AND is_active = 1
+2026-05-16 21:34:05 | ::1 | anonymous | LOGIN ATTEMPT: SELECT * FROM users WHERE username = 'admin' AND password = '0192023a7bbd73250516f069df18b500' AND is_active = 1
