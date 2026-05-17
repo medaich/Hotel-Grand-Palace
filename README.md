@@ -1,107 +1,58 @@
-# Hotel Grand Palace — Management System
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-A deliberately vulnerable PHP hotel management web application built for **security auditing and penetration testing practice**.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-> ⚠️ **Do not deploy this on a public server.** It contains intentional security vulnerabilities for educational purposes.
+## About Laravel
 
----
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Requirements
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-- PHP 8.0+
-- MySQL 5.7+ / MariaDB
-- A local web server (or PHP's built-in server)
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
----
+## Learning Laravel
 
-## Setup
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-**1. Create the database**
+In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-```bash
-mysql -u root hotel_db < setup.sql
-```
+You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
 
-**2. Configure environment**
+## Agentic Development
 
-```bash
-cp .env.example .env
-```
-
-Then edit `.env` and set your values (at minimum `DB_PASS`):
-
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=your_password
-DB_NAME=hotel_db
-```
-
-**3. Seed demo data** *(optional — wipes and re-populates all tables)*
-
-
-```powershell
-Get-Content seeder.sql | mysql -u root hotel_db
-```
-
-**4. Start the server**
+Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
 
 ```bash
-php -S localhost:8000
+composer require laravel/boost --dev
+
+php artisan boost:install
 ```
 
-Then open **http://localhost:8000** in your browser.
+Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
 
----
+## Contributing
 
-## Demo Credentials
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-| Username  | Password    | Role    |
-|-----------|-------------|---------|
-| `admin`   | `admin123`  | Admin   |
-| `manager` | `manager123`| Manager |
-| `staff`   | `staff123`  | Staff   |
-| `carlos`  | `password`  | Staff   |
+## Code of Conduct
 
----
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Pages
+## Security Vulnerabilities
 
-| URL | Description |
-|-----|-------------|
-| `index.php` | Login |
-| `dashboard.php` | Overview & stats |
-| `rooms.php` | Room management |
-| `bookings.php` | Booking management |
-| `guests.php` | Guest profiles |
-| `services.php` | Service charges |
-| `maintenance.php` | Maintenance requests |
-| `messages.php` | Internal messages |
-| `reports.php` | Revenue & occupancy reports |
-| `admin.php` | Admin panel (admin only) |
-| `profile.php` | User profile & password |
-| `reset_password.php` | Password reset flow |
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
----
+## License
 
-## Project Structure
-
-```
-Hotel_management/
-├── config.php              # DB credentials, constants, session start
-├── index.php               # Login page
-├── dashboard.php           # Main dashboard
-├── *.php                   # Feature pages
-├── includes/
-│   ├── auth.php            # Session/role guards
-│   ├── header.php          # Shared HTML header + sidebar
-│   └── footer.php          # Shared HTML footer + JS
-├── uploads/                # Room image uploads
-├── logs/
-│   └── app.log             # Application activity log
-├── setup.sql               # Database schema
-├── seeder.sql              # Demo data seeder
-└── vulnerabilities.md      # Security audit reference
-```
-
----
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset Password | {{ config('app.name', 'Hotel Grand Palace') }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460); min-height:100vh; display:flex; align-items:center; }
+        .reset-card { border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.4); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card reset-card">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold mb-1"><i class="fas fa-key me-2"></i>Password Reset</h4>
+                    <p class="text-muted mb-4">
+                        {{ config('app.name', 'Hotel Grand Palace') }}
+                    </p>
+
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <form method="POST" action="{{ route('password.update') }}">
+                        @csrf
+                        <input type="hidden" name="token" value="{{ $token }}">
+                        <input type="hidden" name="user_id" value="{{ $user_id }}">
+                        <div class="mb-3">
+                            <label class="form-label">New Password</label>
+                            <input type="password" name="new_password" class="form-control" required>
+                            <small class="text-muted">Min length not enforced — any password accepted</small>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Reset Password</button>
+                    </form>
+
+                    <div class="mt-3 text-center">
+                        <a href="{{ route('login') }}" class="text-muted small">Back to login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
